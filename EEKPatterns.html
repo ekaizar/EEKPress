@@ -80,7 +80,7 @@
             max-width: 100%;
             height: auto;
             display: block;
-            max-height: 80vh; /* Prevents image from being taller than screen */
+            max-height: 80vh; 
         }
 
         .caption {
@@ -99,6 +99,52 @@
             display: block;
         }
 
+        /* UPDATED ADVERTISEMENT BOX STYLES */
+        .ad-container {
+            margin: 50px auto 20px auto; /* Centers the box itself */
+            text-align: center;          /* Centers the text inside */
+            padding: 30px;
+            
+            /* Box styling */
+            background-color: #ffffff;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px; /* Rounded corners */
+            box-shadow: 0 4px 8px rgba(0,0,0,0.05); /* Subtle shadow */
+            
+            width: 100%;
+            max-width: 500px;
+            box-sizing: border-box;
+            line-height: 1.6;
+        }
+
+        .ad-link {
+            text-decoration: none;
+            color: white;
+            background-color: var(--accent-color);
+            padding: 10px 20px;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            display: inline-block;
+            margin-top: 15px;
+            font-weight: 600;
+        }
+
+        .ad-link:hover {
+            background-color: #5d7e7f; /* Darker teal on hover */
+            transform: translateY(-1px);
+        }
+
+        .ad-label {
+            display: block;
+            font-size: 0.7rem;
+            color: #999;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-bottom: 1px dotted #eee;
+            padding-bottom: 5px;
+        }
+
         footer {
             margin-top: 50px;
             padding: 20px;
@@ -111,6 +157,7 @@
             h1 { font-size: 2rem; }
             header { padding: 40px 20px 20px; }
             .frame { padding: 10px; }
+            .ad-container { width: 90%; padding: 20px; }
         }
     </style>
 </head>
@@ -121,17 +168,16 @@
         <div class="subtitle">a pattern a week</div>
     </header>
 
-        </div>
-        <div class="ad-container">
+<div class="ad-container">
             <span class="ad-label">Advertisement</span>
-            <br>
-             3 Dotted Penguins is offeirng a workshop on repeat patterns <br>
-            on Sunday January 18 at 3pm EST:<br> 
+            
+            3 Dotted Penguins is offering a workshop on repeat patterns<br>
+            on Sunday January 18 at 3pm EST:<br>
+            
             <a href="https://classes.3dottedpenguins.com/magic" class="ad-link" target="_blank">
                 Register for The Magic of Block Printing Demonstration
             </a>
         </div>
-
 
     
     <main>
@@ -152,6 +198,7 @@
 </body>
 
 </html>
+
 
 
 
