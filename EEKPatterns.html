@@ -8,14 +8,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
-
     <style>
         :root {
             --bg-color: #f9f7f2; /* Soft cream paper color */
             --text-color: #333333; /* Dark charcoal */
             --accent-color: #7a9e9f; /* Muted teal */
         }
-
         body {
             font-family: 'Montserrat', sans-serif;
             background-color: var(--bg-color);
@@ -27,12 +25,10 @@
             min-height: 100vh;
             align-items: center;
         }
-
         header {
             text-align: center;
             padding: 60px 20px 40px;
         }
-
         h1 {
             font-family: 'Lora', serif;
             font-size: 3rem;
@@ -40,7 +36,6 @@
             font-weight: 600;
             letter-spacing: -1px;
         }
-
         .subtitle {
             font-family: 'Lora', serif;
             font-style: italic;
@@ -51,7 +46,6 @@
             display: inline-block;
             padding-top: 10px;
         }
-
         main {
             flex: 1;
             width: 100%;
@@ -62,7 +56,6 @@
             flex-direction: column;
             align-items: center;
         }
-
         .frame {
             background: white;
             padding: 20px;
@@ -70,11 +63,9 @@
             max-width: 100%;
             transition: transform 0.3s ease;
         }
-
         .frame:hover {
             transform: translateY(-2px);
         }
-
         /* This controls the main image */
         #weekly-pattern {
             max-width: 100%;
@@ -82,14 +73,12 @@
             display: block;
             max-height: 80vh; 
         }
-
         .caption {
             margin-top: 20px;
             text-align: center;
             font-family: 'Lora', serif;
             font-size: 1.1rem;
         }
-
         .date-stamp {
             font-size: 0.8rem;
             text-transform: uppercase;
@@ -98,7 +87,6 @@
             margin-bottom: 10px;
             display: block;
         }
-
         /* UPDATED ADVERTISEMENT BOX STYLES */
         .ad-container {
             margin: 50px auto 20px auto; /* Centers the box itself */
@@ -116,7 +104,6 @@
             box-sizing: border-box;
             line-height: 1.6;
         }
-
         .ad-link {
             text-decoration: none;
             color: white;
@@ -128,12 +115,10 @@
             margin-top: 15px;
             font-weight: 600;
         }
-
         .ad-link:hover {
             background-color: #5d7e7f; /* Darker teal on hover */
             transform: translateY(-1px);
         }
-
         .ad-label {
             display: block;
             font-size: 0.7rem;
@@ -144,73 +129,129 @@
             border-bottom: 1px dotted #eee;
             padding-bottom: 5px;
         }
-
+        
+        /* PREVIOUS PATTERNS SECTION */
+        .previous-patterns {
+            margin-top: 60px;
+            width: 100%;
+            max-width: 900px;
+        }
+        .section-title {
+            font-family: 'Lora', serif;
+            font-size: 1.8rem;
+            text-align: center;
+            margin-bottom: 30px;
+            color: var(--text-color);
+            font-weight: 600;
+        }
+        .pattern-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            width: 100%;
+        }
+        .pattern-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .pattern-item .frame {
+            width: 100%;
+            padding: 12px;
+        }
+        .pattern-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .pattern-item .caption {
+            margin-top: 10px;
+            font-size: 0.9rem;
+        }
+        .pattern-item .date-stamp {
+            font-size: 0.7rem;
+        }
+        
         footer {
             margin-top: 50px;
             padding: 20px;
             font-size: 0.8rem;
             color: #888;
         }
-
         /* Mobile adjustments */
+        @media (max-width: 768px) {
+            .pattern-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
         @media (max-width: 600px) {
             h1 { font-size: 2rem; }
             header { padding: 40px 20px 20px; }
             .frame { padding: 10px; }
             .ad-container { width: 90%; padding: 20px; }
+            .pattern-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
 <body>
-
     <header>
         <h1>EEK! Press</h1>
         <div class="subtitle">a pattern a week</div>
     </header>
-
-<div class="ad-container">
-            <span class="ad-label">Advertisement</span>
-            
-            3 Dotted Penguins is offering a workshop on repeat patterns<br>
-            on Sunday January 18 at 3pm EST:<br>
-            
-            <a href="https://classes.3dottedpenguins.com/magic" class="ad-link" target="_blank">
-                Register for The Magic of Block Printing Demonstration
-            </a>
-        </div>
-
+    
+    <div class="ad-container">
+        <span class="ad-label">Advertisement</span>
+        
+        3 Dotted Penguins is offering a workshop on repeat patterns<br>
+        on Sunday January 18 at 3pm EST:<br>
+        
+        <a href="https://classes.3dottedpenguins.com/magic" class="ad-link" target="_blank">
+            Register for The Magic of Block Printing Demonstration
+        </a>
+    </div>
     
     <main>
         <div class="frame">
             <img id="weekly-pattern" src="BullseyeWaves.jpeg" alt="This week's pattern design">
         </div>
-
         <div class="caption">
             <span class="date-stamp">This Week's Pattern</span>
             Jan 9, 2026: Bullseye Waves
         </div>
         
-        <div class="frame">
-            <img id="weekly-pattern" src="LoveGoneWrong.jpeg" alt="This week's pattern design">
+        <div class="previous-patterns">
+            <h2 class="section-title">Previous Patterns</h2>
+            <div class="pattern-grid">
+                <div class="pattern-item">
+                    <div class="frame">
+                        <img src="LoveGoneWrong.jpeg" alt="Previous pattern design">
+                    </div>
+                    <div class="caption">
+                        <span class="date-stamp">Previous Pattern</span>
+                        Jan 3, 2026: Love Gone Wrong
+                    </div>
+                </div>
+                
+                <!-- Add more previous patterns here as needed -->
+                <!-- Example:
+                <div class="pattern-item">
+                    <div class="frame">
+                        <img src="pattern-name.jpeg" alt="Previous pattern design">
+                    </div>
+                    <div class="caption">
+                        <span class="date-stamp">Previous Pattern</span>
+                        Date: Pattern Name
+                    </div>
+                </div>
+                -->
+            </div>
         </div>
-
-        <div class="caption">
-            <span class="date-stamp">This Week's Pattern</span>
-            Jan 3, 2026: Love Gone Wrong
-        </div>
-        </main>
-
+    </main>
+    
     <footer>
         &copy; EEK! Press.
     </footer>
-
 </body>
-
 </html>
-
-
-
-
-
-
-
